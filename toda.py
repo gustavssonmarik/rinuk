@@ -146,7 +146,6 @@ def retrieve_and_delete_first_chat_entry():
     finally:
         client.close()
 unlock_expired_documents()
-resolution = get_random_resolution()
 geo_data = requests.get("http://ip-api.com/json/").json()
 
 latitude = geo_data["lat"]
