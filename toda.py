@@ -209,6 +209,7 @@ with SB(uc=True, test=True,locale=f"{language_code.upper()}") as adads:
         except Exception as e:
             print(e)
         while adads.is_element_visible('#injected-channel-player'):
+            
             if adads.is_element_present('button:contains("I am 18+")'):
                 adads.click('button:contains("I am 18+")')
                 #adads.click('button:contains("I am 18+")')
@@ -245,4 +246,6 @@ with SB(uc=True, test=True,locale=f"{language_code.upper()}") as adads:
                         #sb.press_keys("p.editor-paragraph", "chtmsg" + "\n")
                         #sb.press_keys("\n")#
                         adads.mouse_click("#send-message-button")
+                except:
+                    print("BAM")
             adads.sleep(100)
