@@ -3,6 +3,7 @@ import string
 import secrets
 import logging
 import time
+import requests
 from seleniumbase import SB
 import os
 import random 
