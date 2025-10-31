@@ -174,7 +174,7 @@ with SB(uc=True, test=True,locale=f"{language_code.upper()}") as adads:
         if adads.is_element_present('button:contains("Accept")'):
             adads.uc_click('button:contains("Accept")', reconnect_time=4)
         if True:#adads.is_element_present("#live-channel-stream-information"):
-            adads.uc_click('button:contains("Accept")', reconnect_time=4)
+            #adads.uc_click('button:contains("Accept")', reconnect_time=4)
             adads2 = adads.get_new_driver(undetectable=True)
             url1 = "https://kick.com/brutalles"
             adads2.uc_open_with_reconnect(url1, 5)
