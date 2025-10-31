@@ -198,7 +198,7 @@ with SB(uc=True, test=True,locale=f"{language_code.upper()}") as adads:
                 print(e)
         rnd = random.randint(20,30)
         adads.sleep(rnd)
-        if adads.cdp.is_element_present('h2:contains("Oops, something went wrong")'):
+        if adads.is_element_present('h2:contains("Oops, something went wrong")'):
             adads.clear_cookies()
             adads.refresh()
             chatter = 0
