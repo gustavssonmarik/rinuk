@@ -197,7 +197,7 @@ with SB(uc=True, test=True,locale=f"{language_code.upper()}") as adads:
             except Exception as e:
                 print(e)
         rnd = random.randint(20,30)
-        sb.sleep(rnd)
+        adads.sleep(rnd)
         if adads.cdp.is_element_present('h2:contains("Oops, something went wrong")'):
             adads.clear_cookies()
             adads.refresh()
@@ -228,23 +228,23 @@ with SB(uc=True, test=True,locale=f"{language_code.upper()}") as adads:
                         try:
                             selector = f"#quick-emotes-holder > div > div:nth-child({random_index})"
                             rnd = random.randint(1,2)
-                            sb.sleep(rnd)
+                            adads.sleep(rnd)
                             adads.mouse_click(selector)
                             rnd = random.randint(1,2)
-                            sb.sleep(rnd)
+                            adads.sleep(rnd)
                         except Exception as e:
                             print(e)
                     adads.mouse_click("p.editor-paragraph")
-                    #sb.hover_and_click("p.editor-paragraph", "p.editor-paragraph")
+                    #adads.hover_and_click("p.editor-paragraph", "p.editor-paragraph")
                     rnd = random.randint(1,5)
-                    sb.sleep(rnd)
+                    adads.sleep(rnd)
                     chtmsg = retrieve_and_delete_first_chat_entry()
                     #adads.click("p.editor-paragraph")
                     if chtmsg != None:
                         adads.type("p.editor-paragraph", f"{chtmsg}\n")
-                        #sb.gui_write(chtmsg)
-                        #sb.press_keys("p.editor-paragraph", "chtmsg" + "\n")
-                        #sb.press_keys("\n")#
+                        #adads.gui_write(chtmsg)
+                        #adads.press_keys("p.editor-paragraph", "chtmsg" + "\n")
+                        #adads.press_keys("\n")#
                         adads.mouse_click("#send-message-button")
                 except:
                     print("BAM")
